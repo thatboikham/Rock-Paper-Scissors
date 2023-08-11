@@ -6,6 +6,8 @@ const getrandomindex = Math.floor(Math.random() * 3);
 
 let computerselection = arr[getrandomindex]
 
+
+
 function playround(computerselection, playerselection){
   if(playerselection === "sciccors" && computerselection === "rock" || playerselection === "rock" && computerselection === "paper" || playerselection === "paper" && computerselection === "sciccors"){
     return `You lose! ${computerselection} beats ${playerselection}`
@@ -14,4 +16,3 @@ function playround(computerselection, playerselection){
     return `You WIN! ${playerselection} beats ${computerselection}`
   }
   }
-
