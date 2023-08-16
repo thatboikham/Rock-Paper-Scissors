@@ -50,9 +50,9 @@ if(playerscore == computerscore){
   console.log("its a tie")
 }
 else if(playerscore > computerscore){
-  console.log("You win all the overall play")
+  console.log("You win the overall play")
 }
 else{
-  console.log("You lost all rounds")
+  console.log("You lost the overall play ")
 }
 }
