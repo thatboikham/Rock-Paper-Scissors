@@ -3,8 +3,13 @@ console.log(btn)
 btn.forEach((selection) => {
   selection.addEventListener('click', () => {
     playerselection = selection.innerText;
-    console.log(playerselection)
-  })
+
+      //adding a div to display the results both selection
+    const container = document.querySelector('#select');
+    const result = document.createElement('div');
+    result.textContent = `you chooose ${playerselection} and you oppoent chooose ${computerselection}`;
+    container.appendChild(result);
+  });
 });
 
 function computerchoice(){
@@ -30,3 +35,4 @@ let draw = `Its a draw`
       return `You WIN! ${playerselection} beats ${computerselection}`;
     }
   }
+
