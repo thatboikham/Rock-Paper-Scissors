@@ -1,6 +1,11 @@
-let promptAnswer = prompt("type rock paper or sciccors to start the game good luck!")
-let playerselection = promptAnswer.toLowerCase()
-
+const btn = document.querySelectorAll('button')
+console.log(btn)
+btn.forEach((selection) => {
+  selection.addEventListener('click', () => {
+    playerselection = selection.innerText;
+    console.log(playerselection)
+  })
+});
 
 function computerchoice(){
   const arr = ["rock", "paper", "sciccors"];
@@ -14,15 +19,6 @@ let losemessage = `You lose! ${computerselection} beats ${playerselection}`
 let draw = `Its a draw`
 
 
-function game(){
-let playerscore = 0;
-let computerscore = 0;
-
-  for(let i = 0;i < 5; i++){
-   const computerselection = computerchoice();
-   console.log(`Round ${i + 1}`)
-   console.log(`computer Chose: ${computerselection}`)
-
    function playround(computerselection, playerselection){
     if(computerselection == playerselection){
       return draw;
@@ -34,25 +30,3 @@ let computerscore = 0;
       return `You WIN! ${playerselection} beats ${computerselection}`;
     }
   }
-
-   const result = playround(computerselection, playerselection)
-   console.log(result)
-   if(result == winmessage){
-    playerscore++;
-   }else if(result == losemessage){
-    computerscore++;
-   }
-
-}
-console.log(playerscore)
-console.log(computerscore)
-if(playerscore == computerscore){
-  console.log("its a tie")
-}
-else if(playerscore > computerscore){
-  console.log("You win the overall play")
-}
-else{
-  console.log("You lost the overall play ")
-}
-}
