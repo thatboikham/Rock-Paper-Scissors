@@ -5,12 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="select">
+    <h1><span class="r">ROCK</span> <span class="p">PAPER</span> <span class="s">SCISSORS</span></h1>
+    <p>choose wisely!</p>
+    <div class="score-board">
+        <div class="result">
+            <div class="user-result">user</div>
+            <div class="comp-result">comp</div>
+            <span id="user">0</span>:<span id="comp">0</span>
+        </div>
+    </div>
+    <p id="message">you win rock beats scissors</p>
+    <div id="select">
         <button id="rock">Rock</button>
         <button id = "paper">Paper</button>
         <button id = "scissors">Scissors</button>  
     </div>
+    
 </body>
 </html>
