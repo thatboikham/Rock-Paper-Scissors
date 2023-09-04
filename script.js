@@ -18,20 +18,22 @@ btns.forEach((selection) => {
   });
 });
 
-
+function getSubscriptOf(word){
+  return word.sub();
+}
 
 function win(playerselection, computerselection){
   playerscore++;
   userSpan.innerHTML = playerscore;
   compSpan.innerHTML = computerscore;
-  messageP.innerHTML = `You win ${playerselection}"user-" beats ${computerselection}"comp-"`
+  messageP.innerHTML = `You win ${playerselection}${getSubscriptOf('user')} beats ${computerselection}${getSubscriptOf('comp')}`
 
  }
  function lose(playerselection, computerselection){
   computerscore++;
   compSpan.innerHTML = computerscore;
   userSpan.innerHTML = playerscore;
-  messageP.innerHTML = `You lose ${computerselection}"comp-" beats ${playerselection}"user-"`
+  messageP.innerHTML = `You lose ${computerselection}${getSubscriptOf('comp')} beats ${playerselection}${getSubscriptOf('user')}`
 
  }
  function draw(playerselection, computerselection){
