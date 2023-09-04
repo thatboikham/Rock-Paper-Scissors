@@ -33,7 +33,7 @@ function win(playerselection, computerselection){
   computerscore++;
   compSpan.innerHTML = computerscore;
   userSpan.innerHTML = playerscore;
-  messageP.innerHTML = `You lose ${computerselection}${getSubscriptOf('comp')} beats ${playerselection}${getSubscriptOf('user')}`
+  messageP.innerHTML = `You lose ${playerselection}${getSubscriptOf('user')} beats ${computerselection}${getSubscriptOf('comp')}`
 
  }
  function draw(playerselection, computerselection){
