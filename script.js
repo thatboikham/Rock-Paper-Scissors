@@ -37,7 +37,7 @@ function win(playerselection, computerselection){
 
  }
  function draw(playerselection, computerselection){
-  messageP.innerHTML = `its a tie ${playerselection} is equal to ${computerselection}`
+  messageP.innerHTML = `its a tie ${playerselection}${getSubscriptOf('user')} is equal to ${computerselection}${getSubscriptOf('comp')}`
 
  }
  function playround(playerselection, computerselection){
